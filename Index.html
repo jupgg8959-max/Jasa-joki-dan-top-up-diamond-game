@@ -1,0 +1,284 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Game Store - Top Up Diamond & Jasa Joki Game</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#6366f1',
+                            dark: '#0b0f19',
+                            card: '#151c2c',
+                            accent: '#a855f7',
+                            neon: '#22d3ee'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a855f7 0%, #6366f1 50%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(21, 28, 44, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .active-tab {
+            border-bottom: 3px solid #a855f7;
+            color: #a855f7;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 glass-card border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="scrollToSection('hero')">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-cyan-400 flex items-center justify-center font-bold text-xl text-white shadow-lg shadow-purple-500/30">
+                        <i class="fa-solid font-bold fa-gamepad"></i>
+                    </div>
+                    <span class="font-extrabold text-xl tracking-wider text-white">NEXUS<span class="text-purple-400">STORE</span></span>
+                </div>
+                
+                <div class="hidden md:flex space-x-6 font-medium text-sm text-gray-300">
+                    <a href="#topup" class="hover:text-purple-400 transition">Top Up Diamond</a>
+                    <a href="#joki" class="hover:text-purple-400 transition">Jasa Joki</a>
+                    <a href="#metode" class="hover:text-purple-400 transition">Layanan & Bayar</a>
+                    <a href="#order" class="hover:text-purple-400 transition">Form Order</a>
+                </div>
+
+                <a href="https://wa.me/6289665165123" target="_blank" class="flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl text-sm font-semibold transition shadow-lg shadow-emerald-600/30">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat WA</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative py-12 md:py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-purple-950/60 border border-purple-500/30 px-3 py-1.5 rounded-full text-xs sm:text-sm text-purple-300">
+                    <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>Proses Cepat 1-10 Menit | Garansi Safe & Legal</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
+                    Top Up Game & Joki Rank <br><span class="gradient-text">Tercepat & Terpercaya</span>
+                </h1>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                    Solusi kebutuhan gaming kamu! Menyediakan Diamond Mobile Legends, Free Fire, PUBG, dan Jasa Joki Rank profesional. Melayani COD ke rumah dan bayar via QRIS/E-Wallet!
+                </p>
+                
+                <!-- Quick Info Badges -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 text-left">
+                    <div class="glass-card p-3 rounded-xl flex items-center space-x-3">
+                        <i class="fa-solid fa-qrcode text-2xl text-cyan-400"></i>
+                        <div>
+                            <p class="text-xs text-gray-400">Pembayaran</p>
+                            <p class="text-xs font-bold text-white">QRIS & All Bank</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-3 rounded-xl flex items-center space-x-3">
+                        <i class="fa-solid fa-house-chimney text-2xl text-purple-400"></i>
+                        <div>
+                            <p class="text-xs text-gray-400">Fitur Khusus</p>
+                            <p class="text-xs font-bold text-white">Bisa COD Ke Rumah</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-3 rounded-xl flex items-center space-x-3">
+                        <i class="fa-solid fa-bolt text-2xl text-amber-400"></i>
+                        <div>
+                            <p class="text-xs text-gray-400">Kecepatan</p>
+                            <p class="text-xs font-bold text-white">Serba Otomatis</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-3 rounded-xl flex items-center space-x-3">
+                        <i class="fa-brands fa-whatsapp text-2xl text-emerald-400"></i>
+                        <div>
+                            <p class="text-xs text-gray-400">Hubungi</p>
+                            <p class="text-xs font-bold text-white">0896-6516-5123</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIST HARGA TOP UP -->
+    <section id="topup" class="py-12 bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Daftar Harga Top Up Diamond</h2>
+                    <p class="text-gray-400 text-sm mt-1">Pilih game favoritmu dan pesan langsung lewat WA</p>
+                </div>
+            </div>
+
+            <!-- Game Tabs Selector -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                <button onclick="switchGame('ml')" id="btn-ml" class="game-btn glass-card p-4 rounded-xl flex flex-col items-center justify-center space-y-2 border-2 border-purple-500 bg-purple-950/30 text-white transition">
+                    <i class="fa-solid fa-crown text-2xl text-amber-400"></i>
+                    <span class="font-bold text-sm">Mobile Legends</span>
+                </button>
+                <button onclick="switchGame('ff')" id="btn-ff" class="game-btn glass-card p-4 rounded-xl flex flex-col items-center justify-center space-y-2 border-2 border-transparent text-gray-400 hover:text-white transition">
+                    <i class="fa-solid fa-fire text-2xl text-orange-500"></i>
+                    <span class="font-bold text-sm">Free Fire</span>
+                </button>
+                <button onclick="switchGame('pubg')" id="btn-pubg" class="game-btn glass-card p-4 rounded-xl flex flex-col items-center justify-center space-y-2 border-2 border-transparent text-gray-400 hover:text-white transition">
+                    <i class="fa-solid fa-crosshair text-2xl text-emerald-400"></i>
+                    <span class="font-bold text-sm">PUBG Mobile</span>
+                </button>
+                <button onclick="switchGame('genshin')" id="btn-genshin" class="game-btn glass-card p-4 rounded-xl flex flex-col items-center justify-center space-y-2 border-2 border-transparent text-gray-400 hover:text-white transition">
+                    <i class="fa-solid fa-gem text-2xl text-cyan-400"></i>
+                    <span class="font-bold text-sm">Genshin Impact</span>
+                </button>
+            </div>
+
+            <!-- Price Lists -->
+            <!-- Mobile Legends -->
+            <div id="list-ml" class="game-list grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="glass-card p-4 rounded-2xl hover:border-purple-500/50 transition">
+                    <p class="text-xs text-purple-400 font-semibold">Mobile Legends</p>
+                    <p class="text-lg font-bold text-white mt-1">86 Diamond</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 20.000</p>
+                    <button onclick="selectProduct('Mobile Legends', '86 Diamond - Rp 20.000')" class="w-full mt-3 bg-purple-600/30 hover:bg-purple-600 text-purple-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-purple-500/50 transition">
+                    <p class="text-xs text-purple-400 font-semibold">Mobile Legends</p>
+                    <p class="text-lg font-bold text-white mt-1">172 Diamond</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 40.000</p>
+                    <button onclick="selectProduct('Mobile Legends', '172 Diamond - Rp 40.000')" class="w-full mt-3 bg-purple-600/30 hover:bg-purple-600 text-purple-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border-2 border-purple-500/40 relative overflow-hidden">
+                    <span class="absolute top-0 right-0 bg-purple-600 text-[10px] text-white px-2 py-0.5 rounded-bl-lg font-bold">BEST SELLER</span>
+                    <p class="text-xs text-purple-400 font-semibold">Mobile Legends</p>
+                    <p class="text-lg font-bold text-white mt-1">257 Diamond</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 60.000</p>
+                    <button onclick="selectProduct('Mobile Legends', '257 Diamond - Rp 60.000')" class="w-full mt-3 bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-purple-500/50 transition">
+                    <p class="text-xs text-purple-400 font-semibold">Mobile Legends</p>
+                    <p class="text-lg font-bold text-white mt-1">344 Diamond</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 80.000</p>
+                    <button onclick="selectProduct('Mobile Legends', '344 Diamond - Rp 80.000')" class="w-full mt-3 bg-purple-600/30 hover:bg-purple-600 text-purple-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-purple-500/50 transition">
+                    <p class="text-xs text-purple-400 font-semibold">Mobile Legends</p>
+                    <p class="text-lg font-bold text-white mt-1">706 Diamond</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 160.000</p>
+                    <button onclick="selectProduct('Mobile Legends', '706 Diamond - Rp 160.000')" class="w-full mt-3 bg-purple-600/30 hover:bg-purple-600 text-purple-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-purple-500/50 transition">
+                    <p class="text-xs text-purple-400 font-semibold">Mobile Legends</p>
+                    <p class="text-lg font-bold text-white mt-1">Weekly Diamond Pass</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 28.000</p>
+                    <button onclick="selectProduct('Mobile Legends', 'Weekly Diamond Pass - Rp 28.000')" class="w-full mt-3 bg-purple-600/30 hover:bg-purple-600 text-purple-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+            </div>
+
+            <!-- Free Fire -->
+            <div id="list-ff" class="game-list hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="glass-card p-4 rounded-2xl hover:border-orange-500/50 transition">
+                    <p class="text-xs text-orange-400 font-semibold">Free Fire</p>
+                    <p class="text-lg font-bold text-white mt-1">140 Diamond</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 19.000</p>
+                    <button onclick="selectProduct('Free Fire', '140 Diamond - Rp 19.000')" class="w-full mt-3 bg-orange-600/30 hover:bg-orange-600 text-orange-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-orange-500/50 transition">
+                    <p class="text-xs text-orange-400 font-semibold">Free Fire</p>
+                    <p class="text-lg font-bold text-white mt-1">355 Diamond</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 46.000</p>
+                    <button onclick="selectProduct('Free Fire', '355 Diamond - Rp 46.000')" class="w-full mt-3 bg-orange-600/30 hover:bg-orange-600 text-orange-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-orange-500/50 transition">
+                    <p class="text-xs text-orange-400 font-semibold">Free Fire</p>
+                    <p class="text-lg font-bold text-white mt-1">720 Diamond</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 92.000</p>
+                    <button onclick="selectProduct('Free Fire', '720 Diamond - Rp 92.000')" class="w-full mt-3 bg-orange-600/30 hover:bg-orange-600 text-orange-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-orange-500/50 transition">
+                    <p class="text-xs text-orange-400 font-semibold">Free Fire</p>
+                    <p class="text-lg font-bold text-white mt-1">Member Mingguan</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 29.000</p>
+                    <button onclick="selectProduct('Free Fire', 'Member Mingguan - Rp 29.000')" class="w-full mt-3 bg-orange-600/30 hover:bg-orange-600 text-orange-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+            </div>
+
+            <!-- PUBG Mobile -->
+            <div id="list-pubg" class="game-list hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="glass-card p-4 rounded-2xl hover:border-emerald-500/50 transition">
+                    <p class="text-xs text-emerald-400 font-semibold">PUBG Mobile</p>
+                    <p class="text-lg font-bold text-white mt-1">60 UC</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 15.000</p>
+                    <button onclick="selectProduct('PUBG Mobile', '60 UC - Rp 15.000')" class="w-full mt-3 bg-emerald-600/30 hover:bg-emerald-600 text-emerald-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-emerald-500/50 transition">
+                    <p class="text-xs text-emerald-400 font-semibold">PUBG Mobile</p>
+                    <p class="text-lg font-bold text-white mt-1">325 UC</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 75.000</p>
+                    <button onclick="selectProduct('PUBG Mobile', '325 UC - Rp 75.000')" class="w-full mt-3 bg-emerald-600/30 hover:bg-emerald-600 text-emerald-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-emerald-500/50 transition">
+                    <p class="text-xs text-emerald-400 font-semibold">PUBG Mobile</p>
+                    <p class="text-lg font-bold text-white mt-1">660 UC</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 145.000</p>
+                    <button onclick="selectProduct('PUBG Mobile', '660 UC - Rp 145.000')" class="w-full mt-3 bg-emerald-600/30 hover:bg-emerald-600 text-emerald-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+            </div>
+
+            <!-- Genshin Impact -->
+            <div id="list-genshin" class="game-list hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="glass-card p-4 rounded-2xl hover:border-cyan-500/50 transition">
+                    <p class="text-xs text-cyan-400 font-semibold">Genshin Impact</p>
+                    <p class="text-lg font-bold text-white mt-1">Blessing Welkin</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 65.000</p>
+                    <button onclick="selectProduct('Genshin Impact', 'Blessing Welkin Moon - Rp 65.000')" class="w-full mt-3 bg-cyan-600/30 hover:bg-cyan-600 text-cyan-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-cyan-500/50 transition">
+                    <p class="text-xs text-cyan-400 font-semibold">Genshin Impact</p>
+                    <p class="text-lg font-bold text-white mt-1">300 Genesis</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 65.000</p>
+                    <button onclick="selectProduct('Genshin Impact', '300 Genesis Crystals - Rp 65.000')" class="w-full mt-3 bg-cyan-600/30 hover:bg-cyan-600 text-cyan-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+                <div class="glass-card p-4 rounded-2xl hover:border-cyan-500/50 transition">
+                    <p class="text-xs text-cyan-400 font-semibold">Genshin Impact</p>
+                    <p class="text-lg font-bold text-white mt-1">980 Genesis</p>
+                    <p class="text-emerald-400 font-extrabold text-xl mt-2">Rp 200.000</p>
+                    <button onclick="selectProduct('Genshin Impact', '980 Genesis Crystals - Rp 200.000')" class="w-full mt-3 bg-cyan-600/30 hover:bg-cyan-600 text-cyan-200 hover:text-white text-xs font-bold py-2 rounded-lg transition">Pilih Paket</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIST HARGA JOKI -->
+    <section id="joki" class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8 text-center sm:text-left
